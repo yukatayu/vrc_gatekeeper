@@ -5,6 +5,19 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+# https://crates.io/
+# https://docs.rs/
+# cargo-edit の cargo add を使う
+
 [dependencies]
-reqwest = { version = "0.11", features = ["blocking", "json"] }
-# tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.11", features = ["json", "cookies"] }  # REST
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = { version = "0.15.0", features = ["rustls-tls"] }  # Web Socket
+futures-util = "0.3.17"
+url = "2.2.2"
+futures-channel = "0.3.17"
+serde = "1.0.130"
+serde_json = "1.0.69"
+serde_derive = "1.0.130"
+http = "0.2.5"
+anyhow = "1.0.45"
